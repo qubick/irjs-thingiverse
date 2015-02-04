@@ -2,9 +2,10 @@
 
 $ thing pumpkin
 
-pumpkin1.stl
-pumpkin2.stl
-pumpkin3.stl
+	pumpkin1.stl
+	pumpkin2.stl
+	pumpkin3.stl
+
 
 # API
 
@@ -21,4 +22,5 @@ pumpkin3.stl
 # Examples
 
 # Future Plan
+
 ```thing.openAtMakerBot('thing#')
