@@ -6,9 +6,9 @@
 
 	$ thing search pumpkin
 
-pumpkin1.stl
-pumpkin2.stl
-pumpkin3.stl
+	pumpkin1.stl
+	pumpkin2.stl
+	pumpkin3.stl
 
 
 # API
