@@ -1,5 +1,10 @@
 # Command Line
 
+$ thing pumpkin
+
+pumpkin1.stl
+pumpkin2.stl
+pumpkin3.stl
 
 # API
 
