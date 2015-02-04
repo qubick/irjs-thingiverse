@@ -1,14 +1,14 @@
 # Installation
 
-$ npm install -g irjs-thingiverse
+	$ npm install -g irjs-thingiverse
 
 # CLI
 
-$ thing search pumpkin
+	$ thing search pumpkin
 
-	pumpkin1.stl
-	pumpkin2.stl
-	pumpkin3.stl
+pumpkin1.stl
+pumpkin2.stl
+pumpkin3.stl
 
 
 # API
@@ -28,7 +28,7 @@ $ thing search pumpkin
 
 # Test
 
-$ mocha
+	$ mocha
 
 # Examples
 
