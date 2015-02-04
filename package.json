@@ -1,0 +1,26 @@
+{
+  "name": "irjs-thingiverse",
+  "version": "0.0.1",
+  "description": "Thingiverse API to search, upload, and get 3D models",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qubick/irjs-thingiverse.git"
+  },
+  "keywords": [
+    "thingiverse",
+    "3d",
+    "printer",
+    "3d",
+    "modeling"
+  ],
+  "author": "Jeeeun, Vicki",
+  "license": "CC",
+  "bugs": {
+    "url": "https://github.com/qubick/irjs-thingiverse/issues"
+  },
+  "homepage": "https://github.com/qubick/irjs-thingiverse"
+}
