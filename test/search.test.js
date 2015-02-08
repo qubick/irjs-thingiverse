@@ -27,3 +27,24 @@ describe('search', function() {
 
 
 })
+
+describe('search', function() {
+    this.timeout(5000);
+
+    it('should return the thingiverse work by a particular user', function(done) {
+
+        streamify([
+            ['zefram', 'eried', 'shira']
+        ])
+            .pipe(refine.start())
+            .pipe(select.cols(0, transform.search()))
+            .pipe(refine.end())
+
+            .pipe(assert.first(function(row) {
+                row.should.be.eql(['http://www.google.com/', 'b', 'c'])
+            }))
+            .pipe(assert.end(done))
+
+    })
+})
+
