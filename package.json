@@ -1,6 +1,6 @@
 {
   "name": "irjs-thingiverse",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Thingiverse API to search, upload, and get 3D models",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,16 @@
   "bugs": {
     "url": "https://github.com/qubick/irjs-thingiverse/issues"
   },
-  "homepage": "https://github.com/qubick/irjs-thingiverse"
+  "homepage": "https://github.com/qubick/irjs-thingiverse",
+  "dependencies": {
+    "file-exists": "^0.1.1",
+    "htm-to-json": "^0.1.4"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "searchbyterm": "lib/searchByTerm.js",
+	 "searchbytag": "lib/searchByTag.js",
+	 "getthingbyid": "lib/getThingById.js"
+	 "getthingsfromto": "lib/getthingsfromto.js"
+  }
 }
