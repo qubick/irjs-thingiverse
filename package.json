@@ -31,7 +31,7 @@
   "bin": {
     "searchbyterm": "lib/searchByTerm.js",
 	 "searchbytag": "lib/searchByTag.js",
-	 "getthingbyid": "lib/getThingById.js"
+	 "getthingbyid": "lib/getThingById.js",
 	 "getthingsfromto": "lib/getthingsfromto.js"
   }
 }
