@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+var thing = require('../lib'),
+	program = require('commander')
+
+
+program
+	.command('searchByTerm')
+	.description('search things by term')
+	.action(function(options){
+		thing.searchByTerm(term)
+	});
+
+program
+	.command('getThingById')
+	.description()
+	.action(function(options){
+		thing.getThingById(id)
+	});
+
+program
+	.version('0.0.1')
+	.usage()
+	.option('-w, --word <word>', 'search term', term)
+	.option('-r, --range <a> <b>', 'range from to', range)
+	.option('-t, --tag <tag1> .. <tagN>', 'tag list', tag)
+	.option('-i, --id <items>', 'thing id', id)
+	.parse(process.argv);
+
+program.range = program.range || [];
