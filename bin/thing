@@ -5,15 +5,15 @@ var thing = require('../lib'),
 
 
 program
-	.command('searchByTerm')
+	.command('ThingByTerm')
 	.description('search things by term')
 	.action(function(options){
-		thing.searchByTerm(term)
+		thing.searchByTerm(options.term )
 	});
 
 program
-	.command('getThingById')
-	.description()
+	.command('ThingById')
+	.description('get file from thing by file id')
 	.action(function(options){
 		thing.getThingById(id)
 	});
@@ -28,3 +28,5 @@ program
 	.parse(process.argv);
 
 program.range = program.range || [];
+
+console.log('search thingiverse by...');
