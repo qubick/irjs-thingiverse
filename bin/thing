@@ -37,10 +37,9 @@ program
 	.version('0.0.1')
 	.usage('[options] <file ..>')
 	.option('-w, --word <text>', 'search term', String)
-	.option('-r, --range <>', 'range from', range)
-	.option('-t, --tag <tag1> .. <tagN>', 'tag list', String)
+	.option('-t, --tag <tag>', 'tag list', String)
 	.option('-i, --id <items>', 'thing id', parseInt)
-	.option('-u, --user <usename>', 'user name', String)
+	.option('-u, --user <username>', 'user name', String)
 	.parse(process.argv);
 
 program.range = program.range || [];
