@@ -19,7 +19,7 @@ program
 	});
 
 program
-	.command('FileById')
+	.command('getFile')
 	.description('get file from thing by file id')
 	.action(function(options){
 		console.log("Download file by Id ")
@@ -27,7 +27,7 @@ program
 	});
 
 program
-	.command('getThings')
+	.command('getFiles')
 	.description('get file from thing by file id')
 	.action(function(options){
 		thing.getThingsFromTo(options.range[0], options.range[1])
