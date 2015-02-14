@@ -12,6 +12,8 @@ program
 			thing.searchByWord(program)
 		if(program.tag)
 			thing.searchByTag(program)
+		if(program.user)
+			thing.searchByUser(program)
 	});
 
 program
@@ -26,7 +28,16 @@ program
 
 program
 	.command('help')
-	
+	.description('get help for options')
+	.action(function(src){
+		console.log('\n [command] [option] \n')
+		console.log('-w search by word')
+		console.log('-t search by tag')
+		console.log('-u search by username')
+		console.log('-i get single file by id')
+		console.log('-r get multiple files by range\n')
+	});
+
 program
 	.version('0.0.1')
 	.usage('[options] <file ..>')
