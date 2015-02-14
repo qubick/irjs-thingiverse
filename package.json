@@ -1,7 +1,7 @@
 {
   "name": "irjs-thingiverse",
-  "version": "0.0.6",
-  "description": "Thingiverse API to search, upload, and get 3D models",
+  "version": "0.1.0",
+  "description": "Thingiverse API to search, get 3D models (upload will be added)",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -12,10 +12,11 @@
   },
   "keywords": [
     "thingiverse",
-    "3d",
-    "printer",
-    "3d",
-    "modeling"
+    "3d_Printer",
+    "3d_Modeling",
+	 "3D_Printing",
+	 "Makerbot",
+	 "Replicator"
   ],
   "author": "Jeeeun, Vicki",
   "license": "CC",
