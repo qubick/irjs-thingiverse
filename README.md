@@ -1,6 +1,6 @@
 # Installation
 
-	$ npm install -g irjs-thingiverse
+	$ npm install irjs-thingiverse
 
 # CLI
 
@@ -10,6 +10,7 @@
 	pumpkin2.stl
 	pumpkin3.stl
 
+	$ thing 
 
 # API
 

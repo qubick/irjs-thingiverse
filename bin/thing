@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+var thing = require('../lib'),
+	program = require('commander')
+
+
+program
+	.command('searchWord')
+	.description('search things by search term')
+	.action(function(options){
+		thing.searchByWord(options.word)
+	});
+
+program
+	.command('searchTag')
+	.description('search things by tags')
+	.action(function(options){
+		thing.searchByTag(options.tag)
+	});
+
+program
+	.command('getFile')
+	.description('get file from thing by file id')
+	.action(function(options){
+		console.log("Download file by Id ")
+		thing.getFileById(options.id)
+	});
+
+program
+	.command('getFiles')
+	.description('get file from thing by file id')
+	.action(function(options){
+		thing.getThingsFromTo(options.range[0], options.range[1])
+	});
+
+program
+	.version('0.0.1')
+	.usage('[options] <file ..>')
+	.option('-w, --word <text>', 'search term', String)
+	.option('-t, --tag <tag>', 'tag list', String)
+	.option('-i, --id <items>', 'thing id', parseInt)
+	.option('-u, --user <username>', 'user name', String)
+	.parse(process.argv);
+
+program.range = program.range || [];
+
