@@ -5,26 +5,37 @@ var thing = require('../lib'),
 
 
 program
-	.command('ThingByTerm')
-	.description('search things by term')
+	.command('search')
+	.description('search things by search term')
 	.action(function(options){
-		thing.searchByTerm(options.term )
+		if(options.word)
+			thing.searchByWord(options.word)
+		if(options.tag)
+			thing.searchByTag(options.tag)
 	});
 
 program
-	.command('ThingById')
+	.command('FileById')
 	.description('get file from thing by file id')
 	.action(function(options){
-		thing.getThingById(id)
+		thing.getThingById(options.id)
+	});
+
+program
+	.command('getThings')
+	.description('get file from thing by file id')
+	.action(function(options){
+		thing.getThingById(options.from, options.to)
 	});
 
 program
 	.version('0.0.1')
-	.usage()
-	.option('-w, --word <word>', 'search term', term)
-	.option('-r, --range <a> <b>', 'range from to', range)
-	.option('-t, --tag <tag1> .. <tagN>', 'tag list', tag)
-	.option('-i, --id <items>', 'thing id', id)
+	.usage('[options] <file ..>')
+	.option('-w, --word <text>', 'search term', String)
+	.option('-fr, --from <a>', 'range from', parseInt)
+	.option('-to, --to <b>', 'range to', parseInt)
+	.option('-t, --tag <tag1> .. <tagN>', 'tag list', String)
+	.option('-i, --id <items>', 'thing id', parseInt)
 	.parse(process.argv);
 
 program.range = program.range || [];
