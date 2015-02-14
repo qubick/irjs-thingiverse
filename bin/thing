@@ -5,39 +5,43 @@ var thing = require('../lib'),
 
 
 program
-	.command('search')
+	.command('searchWord')
 	.description('search things by search term')
 	.action(function(options){
-		if(options.word)
-			thing.searchByWord(options.word)
-		if(options.tag)
-			thing.searchByTag(options.tag)
+		thing.searchByWord(options.word)
+	});
+
+program
+	.command('searchTag')
+	.description('search things by tags')
+	.action(function(options){
+		thing.searchByTag(options.tag)
 	});
 
 program
 	.command('FileById')
 	.description('get file from thing by file id')
 	.action(function(options){
-		thing.getThingById(options.id)
+		console.log("Download file by Id ")
+		thing.getFileById(options.id)
 	});
 
 program
 	.command('getThings')
 	.description('get file from thing by file id')
 	.action(function(options){
-		thing.getThingById(options.from, options.to)
+		thing.getThingsFromTo(options.range[0], options.range[1])
 	});
 
 program
 	.version('0.0.1')
 	.usage('[options] <file ..>')
 	.option('-w, --word <text>', 'search term', String)
-	.option('-fr, --from <a>', 'range from', parseInt)
-	.option('-to, --to <b>', 'range to', parseInt)
+	.option('-r, --range <>', 'range from', range)
 	.option('-t, --tag <tag1> .. <tagN>', 'tag list', String)
 	.option('-i, --id <items>', 'thing id', parseInt)
+	.option('-u, --user <usename>', 'user name', String)
 	.parse(process.argv);
 
 program.range = program.range || [];
 
-console.log('search thingiverse by...');
