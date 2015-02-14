@@ -31,5 +31,10 @@
   "preferGlobal": "true",
   "bin": {
     "thing": "bin/thing"
+  },
+  "dependencies": {
+  	"request": ">= 2.53.0",
+	"commander": ">= 2.6.0",
+	"async": ">=0.9.0"
   }
 }
