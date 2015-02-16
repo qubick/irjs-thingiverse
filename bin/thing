@@ -5,32 +5,37 @@ var thing = require('../lib'),
 
 
 program
-	.command('searchWord')
+	.command('search')
 	.description('search things by search term')
-	.action(function(options){
-		thing.searchByWord(options.word)
+	.action(function(src, options){
+		if(program.word)
+			thing.searchByWord(program)
+		if(program.tag)
+			thing.searchByTag(program)
+		if(program.user)
+			thing.searchByUser(program)
 	});
 
 program
-	.command('searchTag')
-	.description('search things by tags')
-	.action(function(options){
-		thing.searchByTag(options.tag)
+	.command('get')
+	.description('get file from thing by file id or range')
+	.action(function(src, options){
+		if(program.id)
+			thing.getFileById(program)
+		if(program.range)
+			thing.getFilesFromTo(program)
 	});
 
 program
-	.command('getFile')
-	.description('get file from thing by file id')
-	.action(function(options){
-		console.log("Download file by Id ")
-		thing.getFileById(options.id)
-	});
-
-program
-	.command('getFiles')
-	.description('get file from thing by file id')
-	.action(function(options){
-		thing.getThingsFromTo(options.range[0], options.range[1])
+	.command('help')
+	.description('get help for options')
+	.action(function(src){
+		console.log('\n [command] [option] \n')
+		console.log('-w search by word')
+		console.log('-t search by tag')
+		console.log('-u search by username')
+		console.log('-i get single file by id')
+		console.log('-r get multiple files by range\n')
 	});
 
 program
@@ -39,8 +44,7 @@ program
 	.option('-w, --word <text>', 'search term', String)
 	.option('-t, --tag <tag>', 'tag list', String)
 	.option('-i, --id <items>', 'thing id', parseInt)
-	.option('-u, --user <username>', 'user name', String)
+	.option('-u, --user <usename>', 'user name', String)
+	.option('-r, --range <range>', 'thing range', String)
 	.parse(process.argv);
-
-program.range = program.range || [];
 
