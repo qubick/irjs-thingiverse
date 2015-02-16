@@ -61,12 +61,12 @@ describe('searchByUser()', function() {
     })
 
 
-describe('searchByTerm()', function() {
+describe('searchByWord()', function() {
     this.timeout(10000);
         it('should save to file the first 6 works matching the term', function(done) {
 
             
-            thing.searchByTerm('robot')
+            thing.searchByWord('robot')
             foundFile = fileExists('../files/Shoulder for Robot InMoov.zip')
             foundFile.should.be.eql(true)
             done()
