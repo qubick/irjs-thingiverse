@@ -47,32 +47,33 @@ describe('searchByTag()', function() {
         })
     })
 
-// describe('getFileByID()', function() {
-//     this.timeout(10000);
-//         it('should save to file the first 6 works matching the term', function(done) {
+describe('getFileById()', function() {
+    this.timeout(10000);
+        it('should save to file the work with matching id', function(done) {
 
             
-//             thing.getFileByID('996355', 'ex')
-//             assert.first(function(row) {
-//                 row.should.be.eql('saved')
-//             })
-//             done()
+            thing.getFileById('996355')
+            assert.first(function(row) {
+                row.should.be.eql('Download file by file ID 996355')
+            })
+            done()
                 
-//         })
-//     })
+        })
+    })
 
-// describe('getThingsFromTo()', function() {
-//     this.timeout(10000);
-//         it('should save to file the first 6 works matching the term', function(done) {
+describe('getFilesFromTo()', function() {
+    this.timeout(10000);
+        it('should save to file the first 6 works matching the term', function(done) {
 
             
-//             thing.getThingsFromTo(274500,274541)
-//             foundFile = fileExists('../files/Shoulder for Robot InMoov.zip')
-//             foundFile.should.be.eql(true)
-//             done()
+            thing.getFilesFromTo('274500-274541')
+            assert.first(function(row) {
+                row.should.be.eql('Downloading multiple files (.STL only) in range fromm 274500 to 274541')
+            })
+            done()
                 
-//         })
-//     })
+        })
+    })
 
 describe('createThing()', function() {
     this.timeout(10000);
@@ -87,4 +88,4 @@ describe('createThing()', function() {
                 
         })
     })
-})
+ })
