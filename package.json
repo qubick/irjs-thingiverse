@@ -1,6 +1,6 @@
 {
   "name": "irjs-thingiverse",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Thingiverse API to search, get 3D models. This is works-in-progress",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,9 @@
     "thingiverse",
     "3d_Printer",
     "3d_Modeling",
-	 "3D_Printing",
-	 "Makerbot",
-	 "Replicator"
+    "3D_Printing",
+    "Makerbot",
+    "Replicator"
   ],
   "author": "Jeeeun, Vicki",
   "license": "CC",
@@ -25,18 +25,15 @@
   },
   "homepage": "https://github.com/qubick/irjs-thingiverse",
   "dependencies": {
-    "file-exists": "^0.1.1",
-    "htm-to-json": "^0.1.4"
+    "async": ">=0.9.0",
+    "commander": ">= 2.6.0",
+    "download": "^4.0.0",
+    "htm-to-json": ">= 0.1.4",
+    "request": ">= 2.53.0",
+    "request-json": ">= 0.0.1"
   },
   "preferGlobal": "true",
   "bin": {
     "thing": "bin/thing"
-  },
-  "dependencies": {
-  	"request": ">= 2.53.0",
-	"commander": ">= 2.6.0",
-	"async": ">=0.9.0",
-	"request-json": ">= 0.0.1",
-	"htm-to-json": ">= 0.1.4"
   }
 }
