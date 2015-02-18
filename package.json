@@ -32,7 +32,7 @@
     "request": ">= 2.53.0",
     "request-json": ">= 0.0.1",
 	 "is-json": ">= 1.2.5",
-	 "mongodb": ">= 1.4.31"i,
+	 "mongodb": ">= 1.4.31",
 	 "util": ">= 0.10.3"
   },
   "preferGlobal": "true",
