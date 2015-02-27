@@ -1,6 +1,6 @@
 {
   "name": "irjs-thingiverse",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "Thingiverse API to search, get 3D models. This is works-in-progress",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "commander": ">= 2.6.0",
     "download": "^4.0.0",
     "htm-to-json": ">= 0.1.4",
+	 "http-request": ">= 0.7.0",
     "request": ">= 2.53.0",
     "request-json": ">= 0.0.1",
 	 "is-json": ">= 1.2.5",
