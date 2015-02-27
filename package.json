@@ -2,7 +2,7 @@
   "name": "irjs-thingiverse",
   "version": "0.1.7",
   "description": "Thingiverse API to search, get 3D models. This is works-in-progress",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
   },
