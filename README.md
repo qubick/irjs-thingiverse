@@ -67,16 +67,16 @@
 	$ mocha
 
 # Examples
-	Download multiple stl files by the model ID, verified 3D models by the file format
+`Download multiple stl files by the model ID, verified 3D models by the file format
 	$ node examples/example3.js
 
 # Trouble Shooting
-	If error message says 
+`If error message says 
 	Module does not self-register
-	or
+`or
 	js-bson: Failed to load c++ bson extension, using pure JS version
 	
-	do
+`do
 	
 	rm -rf node_modules
 	npm cache clean
