@@ -71,12 +71,12 @@
 	$ node examples/example3.js
 
 # Trouble Shooting
-`If error message says 
+If error message says 
 	Module does not self-register
-`or
+or
 	js-bson: Failed to load c++ bson extension, using pure JS version
 	
-`do
+Clean node_modules and reinstall dependencies
 	
 	rm -rf node_modules
 	npm cache clean
