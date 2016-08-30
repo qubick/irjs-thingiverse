@@ -68,11 +68,17 @@
 
 # Examples
 Download multiple stl files by the model ID, verified 3D models by the file format
-```$ node examples/example-getFilesByRange.js
+```
+$ node examples/example-getFilesByRange.js
+```
 Search stl files by search term
-```$ node examples/example-searchBySearchTerm.js
+```
+$ node examples/example-searchBySearchTerm.js
+```
 Search stl files by the creator (User Name), verified 3D models by the file format
-```$ node examples/example-searchByUserName.js
+```
+$ node examples/example-searchByUserName.js
+```
 
 # Trouble Shooting
 If error message says 
