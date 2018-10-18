@@ -26,15 +26,21 @@
   "homepage": "https://github.com/qubick/irjs-thingiverse",
   "dependencies": {
     "async": ">=0.9.0",
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
     "commander": ">= 2.6.0",
     "download": "^4.0.0",
+    "flat": "^4.1.0",
+    "himalaya": "^1.1.0",
     "htm-to-json": ">= 0.1.4",
-	 "http-request": ">= 0.7.0",
+    "http-request": ">= 0.7.0",
+    "is-json": ">= 1.2.5",
+    "mocha": "^5.2.0",
+    "mongodb": ">= 1.4.31",
     "request": ">= 2.53.0",
     "request-json": ">= 0.0.1",
-	 "is-json": ">= 1.2.5",
-	 "mongodb": ">= 1.4.31",
-	 "util": ">= 0.10.3"
+    "request-promise": "^4.2.2",
+    "util": ">= 0.10.3"
   },
   "preferGlobal": "true",
   "bin": {
