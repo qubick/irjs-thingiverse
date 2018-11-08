@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+    <head>
+        <title>Blueberry Bowl by Antonin_Nosek - Thingiverse</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQMGU1NADwIHXVhVBA=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Language" content="EN">
+        <meta http-equiv="imagetoolbar" content="no">
+        <meta name="keywords" content="things, digital design, physical objects, rapid prototyping, 3D objects, 3D printing, reprap, fabrication, laser cutter, laser, thingaverse, thingyverse">
+        <meta name="abstract" content="Share your digital designs for physical objects.">
+        <meta name="author" content="Thingiverse.com">
+        <meta name="distribution" content="Global">
+        <meta name="revisit-after" content="1 days">
+        <meta name="robots" content="follow,index">
+        <meta name="description" content="Hello Makers :)
+I&#039;ve get a task from guys of Fillamentum to print something for their amazing Vertigo Starlight material. When I was sitting wit">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="theme-color" content="#248bfb">
+
+                    <meta property="og:type" content="website">                    <meta property="og:title" content="Blueberry Bowl by Antonin_Nosek">                    <meta property="og:description" content="Hello Makers :)
+I&#039;ve get a task from guys of Fillamentum to print something for their amazing Vertigo Starlight material. When I was sitting with my laptop on the balcony with no idea how to make design fitted for this amazing Vertigo one my wife gave me a blueberry smoothie. Sometimes there are things which bring you ideas from nothing :D I hope that this design fits perfectly to this crazy material, what do you think about that?
+Here it is. My Blueberry bowl.
+Design was pretty easy to make, because the Autodesk Meshmixer helped me a lot in this case.
+Model is adjusted to print without supports - There are some overhangs, but they are from the bottom and they are not vissible after printing. If you are still afraid of them, the multimaterial with soluble material is recommended here.
+Model has also edited the bottom which has 1 mm thickness.
+So enjoy guys and if you like it, leave me your comment, like, collect or donate which will help me to grow :)
+Thanks,
+Anton&iacute;n">                    <meta property="og:image" content="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_featured.jpg">                    <meta property="twitter:card" content="summary">                    <meta property="twitter:site" content="@thingiverse">                    <meta property="og:url" content="https://www.thingiverse.com/thing:3147921">                    <meta property="twitter:creator" content="@TondaNosek">
+                    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
+            <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-touch-icon-114x114.png">
+            <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
+            <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png">
+            <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
+            <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png">
+            <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon-76x76.png">
+            <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-touch-icon-152x152.png">
+            <link rel="icon" type="image/png" href="/img/favicons/favicon-192x192.png" sizes="192x192">
+            <link rel="icon" type="image/png" href="/img/favicons/favicon-160x160.png" sizes="160x160">
+            <link rel="icon" type="image/png" href="/img/favicons/favicon-96x96.png" sizes="96x96">
+            <link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16">
+            <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+            <meta name="msapplication-TileColor" content="#ffffff">
+            <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png">
+
+                                    <link rel="alternate" type="application/rss+xml" title="Thingiverse - Blueberry Bowl Comments" href="https://rss.thingiverse.com/thing:3147921">
+
+        <link rel='stylesheet' href='/css/build/basic-7d96672d3f.css'><link rel='stylesheet' href='/css/build/main-4a3c1b3048.css'><link rel='stylesheet' href='/css/build/components-0446527a73.css'><link rel='stylesheet' href='/css/build/gallery-0e47849d37.css'><link rel='stylesheet' href='/css/build/edu-7d7b86d89b.css'><link rel='stylesheet' href='/css/build/thing-16c14a239d.css'><link rel='stylesheet' href='/css/build/dialogs-a1abe84d4a.css'><link rel='stylesheet' href='/css/build/make-bee3fae284.css'>
+        <script>
+
+            var scripts     = ["/js/thingiverse/build/lib-afbc32d766.js","/js/thingiverse/build/header-aa33d7b171.js","/js/thingiverse/build/footer-4b0eb540bf.js","/js/thingiverse/build/things-a5b9960793.js","/js/thingiverse/build/orders-d88ae6ec52.js","/js/thingiverse/build/gallery-bda7b59599.js"];
+            var stylesheets = [];
+        </script>
+
+            </head>
+
+
+    <body class="thingiverse loggedout">
+
+        <div id="wrapper">
+
+            <div class="loading-screen">
+
+                <script type="text/javascript">
+//<![CDATA[
+window.__mirage2 = {petok:"a98ff44647bf43b28b1bdad24602b506c95b512c-1541715083-1800"};
+//]]>
+</script>
+<script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.min.js"></script>
+<img data-cfsrc="/img/loading.gif" alt="Loading" width="50" height="50" class="center" style="display:none;visibility:hidden;"><noscript><img src="/img/loading.gif" alt="Loading" width="50" height="50" class="center"></noscript>
+
+                <span class="message center"></span>
+            </div>
+
+            <div class="page-container">
+                <div id="push-wrap">
+                    <div id="push-main">
+
+                        <a name="top" class="nodisplay"></a>
+
+                                                    <div class="site-header">
+    <div class="center_content justify">
+
+        <nav class="site-header-nav plain-nav justify">
+            <a href="//www.thingiverse.com" class="site-logo">Thingiverse</a>
+
+            <span>
+                <a href="//www.thingiverse.com/dashboard" data-count="0" class="notification-indicator">
+                    Dashboard
+                </a>
+            </span>
+
+            <span class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Explore
+                </a>
+
+                <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <a class="dropdown-option" href="//www.thingiverse.com/newest">Things</a>
+                    <a class="dropdown-option" href="//www.thingiverse.com/groups">Groups</a>
+                    <a class="dropdown-option" href="//www.thingiverse.com/customizable">Customizable Things</a>
+                    <a class="dropdown-option" href="//www.thingiverse.com/collections">Collections</a>
+                    <a class="dropdown-option" href="//www.thingiverse.com/categories">Categories</a>
+                    <a class="dropdown-option" href="//www.thingiverse.com/challenges">Challenges</a>
+                    <a class="dropdown-option" href="//www.thingiverse.com/apps">Apps</a>
+                </div>
+            </span>
+
+            <span class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Education
+                </a>
+                <div class="plain-list dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <a class="dropdown-option" href="//www.thingiverse.com/education">Thingiverse Education</a>
+                    <a class="dropdown-option" href="//www.thingiverse.com/jumpstart">Jumpstart</a>
+                </div>
+            </span>
+
+            <span class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Create
+                </a>
+
+                <div class="plain-list dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <a class="dropdown-option" href="//www.thingiverse.com/thing:0/edit" class="track" data-track-category="thing" data-track-action="create">
+                        Upload a Thing!
+                    </a>
+                    <a class="dropdown-option" href="//www.thingiverse.com/customizer">Customize a Thing</a>
+                </div>
+            </span>
+        </nav>
+
+        <span class="header-search">
+            <form action="//www.thingiverse.com/search" class="search-form">
+                <input type="text" value="" name="q" placeholder="Search Thingiverse">
+                <a href="" class="cancel-icon"></a>
+                <span class="search-icon"></span>
+            </form>
+        </span>
+
+        <div class="login">
+            <div class="login-box">
+            <a href="//accounts.thingiverse.com" class="login-join">Sign in / Join</a>
+    </div>
+        </div>
+    </div>
+</div>
+
+                        <div id="main">
+
+
+
+
+<div class="center_content top_content bottom_content">
+
+
+
+    <div class="item-page-header">
+        <span class="inline">
+
+            <a class="avatar-link" href="/Antonin_Nosek"><div class="avatar-wrapper" data-userid="1607977"><img data-src="https://cdn.thingiverse.com/renders/7c/92/d7/a8/53/a57560a08712ed423bae140349c25768_thumb_medium.jpg" alt="Antonin_Nosek" class="avatar" data-cfsrc="/img/default/Gears_thumb_medium.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://cdn.thingiverse.com/renders/7c/92/d7/a8/53/a57560a08712ed423bae140349c25768_thumb_medium.jpg" alt="Antonin_Nosek" class="avatar" src="/img/default/Gears_thumb_medium.jpg"></noscript></div></a>        </span>
+
+        <div class="item-page-info">
+            <h1>
+                Blueberry Bowl            </h1>
+
+            <span>
+                by <a href="/Antonin_Nosek">Antonin_Nosek</a>            </span>
+
+            <span>
+                Oct 10, 2018            </span>
+        </div>
+    </div>
+
+    <div class="justify">
+        <div class="inline width-2 gallery-holder ">
+
+                <div class="gallery page-gallery">
+    <div class="gallery-main gallery-section">
+        <div class="gallery-controls">
+            <span class="toggle-thingiview icon-glasses">Thingiview</span>
+            <span data-modal="#gallery-fullsize" class="toggle-fullsize icon-expand has-modal show-modal"></span>
+        </div>
+
+        <span class="gallery-left-arrow gallery-arrow"></span>
+
+        <span class="gallery-slider">
+            <div class="gallery-photo"
+                           data-thingiview=""
+                           data-full="https://thingiverse-production-new.s3.amazonaws.com/assets/c1/7f/d9/e1/04/BOWL_01_uncroped.jpg"
+                           data-large="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_display_large.jpg"
+                           data-medium="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_featured.jpg"
+                           data-thumb="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_tiny.jpg"><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_featured.jpg" data-src="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_featured.jpg" data-cfsrc="/img/default/Gears_preview_featured.jpg" style="display:none;visibility:hidden;"><noscript><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_featured.jpg" data-src="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_featured.jpg" src="/img/default/Gears_preview_featured.jpg"></noscript></div><div class="gallery-photo"
+                           data-thingiview=""
+                           data-full="https://thingiverse-production-new.s3.amazonaws.com/assets/3b/ca/90/72/3f/BOWL_02.jpg"
+                           data-large="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_display_large.jpg"
+                           data-medium="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_featured.jpg"
+                           data-thumb="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_tiny.jpg"><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_featured.jpg" data-src="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_featured.jpg" data-cfsrc="/img/default/Gears_preview_featured.jpg" style="display:none;visibility:hidden;"><noscript><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_featured.jpg" data-src="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_featured.jpg" src="/img/default/Gears_preview_featured.jpg"></noscript></div><div class="gallery-photo"
+                           data-thingiview=""
+                           data-full="https://thingiverse-production-new.s3.amazonaws.com/assets/a8/15/82/9b/85/BOWL_01.jpg"
+                           data-large="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_display_large.jpg"
+                           data-medium="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_featured.jpg"
+                           data-thumb="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_tiny.jpg"><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_featured.jpg" data-src="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_featured.jpg" data-cfsrc="/img/default/Gears_preview_featured.jpg" style="display:none;visibility:hidden;"><noscript><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_featured.jpg" data-src="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_featured.jpg" src="/img/default/Gears_preview_featured.jpg"></noscript></div><div class="gallery-photo"
+                           data-thingiview=""
+                           data-full="https://thingiverse-production-new.s3.amazonaws.com/assets/17/13/15/a5/71/BOWL_03.jpg"
+                           data-large="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_display_large.jpg"
+                           data-medium="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_featured.jpg"
+                           data-thumb="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_tiny.jpg"><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_featured.jpg" data-src="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_featured.jpg" data-cfsrc="/img/default/Gears_preview_featured.jpg" style="display:none;visibility:hidden;"><noscript><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_featured.jpg" data-src="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_featured.jpg" src="/img/default/Gears_preview_featured.jpg"></noscript></div><div class="gallery-photo"
+                           data-thingiview="https://thingiverse-production-new.s3.amazonaws.com/threejs_json/96/1e/3e/ec/bb/4585626c22a91cb4ac503a1196854a75.js"
+                           data-full="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_display_large.jpg"
+                           data-large="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_display_large.jpg"
+                           data-medium="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_featured.jpg"
+                           data-thumb="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_tiny.jpg"><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_featured.jpg" data-src="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_featured.jpg" data-cfsrc="/img/default/Gears_preview_featured.jpg" style="display:none;visibility:hidden;"><noscript><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_featured.jpg" data-src="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_featured.jpg" src="/img/default/Gears_preview_featured.jpg"></noscript></div>        </span>
+
+        <span class="gallery-right-arrow gallery-arrow"></span>
+    </div>
+
+    <div class="gallery-thumbs gallery-section">
+        <span class="gallery-left-arrow gallery-arrow"></span>
+
+        <span class="gallery-slider">
+            <div class="gallery-photo"
+                           data-thingiview=""
+                           data-full="https://thingiverse-production-new.s3.amazonaws.com/assets/c1/7f/d9/e1/04/BOWL_01_uncroped.jpg"
+                           data-large="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_display_large.jpg"
+                           data-medium="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_featured.jpg"
+                           data-thumb="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_tiny.jpg"><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_tiny.jpg" data-src="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_tiny.jpg" data-cfsrc="/img/default/Gears_preview_tiny.jpg" style="display:none;visibility:hidden;"><noscript><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_tiny.jpg" data-src="https://cdn.thingiverse.com/renders/77/a3/c9/78/04/0fcbea3de2f6a8a7b2a36d9f2383ce4c_preview_tiny.jpg" src="/img/default/Gears_preview_tiny.jpg"></noscript></div><div class="gallery-photo"
+                           data-thingiview=""
+                           data-full="https://thingiverse-production-new.s3.amazonaws.com/assets/3b/ca/90/72/3f/BOWL_02.jpg"
+                           data-large="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_display_large.jpg"
+                           data-medium="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_featured.jpg"
+                           data-thumb="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_tiny.jpg"><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_tiny.jpg" data-src="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_tiny.jpg" data-cfsrc="/img/default/Gears_preview_tiny.jpg" style="display:none;visibility:hidden;"><noscript><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_tiny.jpg" data-src="https://cdn.thingiverse.com/renders/89/64/cf/13/f5/af3a85e54f1b031504b8f9a5be91ca83_preview_tiny.jpg" src="/img/default/Gears_preview_tiny.jpg"></noscript></div><div class="gallery-photo"
+                           data-thingiview=""
+                           data-full="https://thingiverse-production-new.s3.amazonaws.com/assets/a8/15/82/9b/85/BOWL_01.jpg"
+                           data-large="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_display_large.jpg"
+                           data-medium="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_featured.jpg"
+                           data-thumb="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_tiny.jpg"><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_tiny.jpg" data-src="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_tiny.jpg" data-cfsrc="/img/default/Gears_preview_tiny.jpg" style="display:none;visibility:hidden;"><noscript><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_tiny.jpg" data-src="https://cdn.thingiverse.com/renders/10/56/97/63/61/00ef1d9b79bb4637627c5c6311da1f08_preview_tiny.jpg" src="/img/default/Gears_preview_tiny.jpg"></noscript></div><div class="gallery-photo"
+                           data-thingiview=""
+                           data-full="https://thingiverse-production-new.s3.amazonaws.com/assets/17/13/15/a5/71/BOWL_03.jpg"
+                           data-large="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_display_large.jpg"
+                           data-medium="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_featured.jpg"
+                           data-thumb="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_tiny.jpg"><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_tiny.jpg" data-src="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_tiny.jpg" data-cfsrc="/img/default/Gears_preview_tiny.jpg" style="display:none;visibility:hidden;"><noscript><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_tiny.jpg" data-src="https://cdn.thingiverse.com/renders/c0/ea/1d/81/64/0592e1692b1005f238632c1f5a7a081c_preview_tiny.jpg" src="/img/default/Gears_preview_tiny.jpg"></noscript></div><div class="gallery-photo"
+                           data-thingiview="https://thingiverse-production-new.s3.amazonaws.com/threejs_json/96/1e/3e/ec/bb/4585626c22a91cb4ac503a1196854a75.js"
+                           data-full="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_display_large.jpg"
+                           data-large="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_display_large.jpg"
+                           data-medium="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_featured.jpg"
+                           data-thumb="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_tiny.jpg"><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_tiny.jpg" data-src="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_tiny.jpg" data-cfsrc="/img/default/Gears_preview_tiny.jpg" style="display:none;visibility:hidden;"><noscript><img class="thing-img" data-img="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_tiny.jpg" data-src="https://cdn.thingiverse.com/renders/d1/ba/6a/32/4b/4585626c22a91cb4ac503a1196854a75_preview_tiny.jpg" src="/img/default/Gears_preview_tiny.jpg"></noscript></div>        </span>
+
+        <span class="gallery-right-arrow gallery-arrow"></span>
+    </div>
+</div>
+
+<div class="thingiview">
+    <script src="/thingiview/js/three.min.js?v=2"></script>
+    <script src="/thingiview/js/Thingiview.js?v=2"></script>
+    <script src="/thingiview/js/NormalControls.js?v=2"></script>
+    <script src="/thingiview/js/Detector.js?v=2"></script>
+</div>
+
+<div id=gallery-fullsize class="modal hide fade modal-overflow modal-fullsize">
+    <div class="modal-content-wrapper">
+        <div class="modal-content">
+
+                            <div class="modal-header">
+                    <span data-toggle="#gallery-fullsize .gallery-thumbs" class="toggle-thumbs toggle">&#x25a6;</span>                </div>
+
+
+            <div class="modal-scroll">
+                <div class="dialog-content">
+                                    </div>
+            </div>
+
+            <div class="modal-close close"></div>
+        </div>
+    </div>
+</div>
+                    </div>
+
+        <div class="inline width-1 thing-page-actions">
+
+            <a href="/thing:3147921/zip" class="track show-modal button blue-button icon-download full-width"
+            data-modal="#cc-modal"
+            data-track-category="['thing', 'thing']"
+            data-track-action="Array"
+            data-track-label="['zip', 'zip']"
+            >Download All Files
+        </a>
+
+
+<div class="top_content item-list-interactions" data-thing-id="3147921">
+        <div class="item-interactions justify">
+                    <span class="interaction">
+                <span class="center">
+                    <a href="/login/YToyOntzOjQ6InR5cGUiO3M6ODoicmVkaXJlY3QiO3M6NDoiZGF0YSI7czo0MToiaHR0cHM6Ly93d3cudGhpbmdpdmVyc2UuY29tL3RoaW5nOjMxNDc5MjEiO30="                        data-type="things" data-id="3147921"
+                       class="icon icon-like center loginreq"
+                       title="Like">
+                        <span class="interaction-count">216</span>
+                    </a>
+                </span>
+            </span>
+                    <span class="interaction">
+                <span class="center">
+                    <a href="/login/YToyOntzOjQ6InR5cGUiO3M6ODoicmVkaXJlY3QiO3M6NDoiZGF0YSI7czo0MToiaHR0cHM6Ly93d3cudGhpbmdpdmVyc2UuY29tL3RoaW5nOjMxNDc5MjEiO30="                        data-type="things" data-id="3147921"
+                       class="icon icon-collect center loginreq"
+                       title="Collect">
+                        <span class="interaction-count">264</span>
+                    </a>
+                </span>
+            </span>
+                    <span class="interaction">
+                <span class="center">
+                    <a href="/thing:3147921/comments"                        data-type="things" data-id="3147921"
+                       class="icon icon-comment center "
+                       title="Comments">
+                        <span class="interaction-count">11</span>
+                    </a>
+                </span>
+            </span>
+                    <span class="interaction">
+                <span class="center">
+                    <a href=""                        data-type="things" data-id="3147921"
+                       class="icon icon-make center make loginreq"
+                       title="Post a Make">
+                        <span class="interaction-count">6</span>
+                    </a>
+                </span>
+            </span>
+                    <span class="interaction">
+                <span class="center">
+                    <a href=""                        data-type="things" data-id="3147921"
+                       class="icon icon-watch center disabled"
+                       title="Watch">
+                        <span class="interaction-count">1</span>
+                    </a>
+                </span>
+            </span>
+                    <span class="interaction">
+                <span class="center">
+                    <a href=""                        data-type="things" data-id="3147921"
+                       class="icon icon-remix center remix loginreq"
+                       title="Remix It">
+                        <span class="interaction-count">1</span>
+                    </a>
+                </span>
+            </span>
+                    <span class="interaction">
+                <span class="center">
+                    <a href="#"                        data-type="things" data-id="3147921"
+                       class="icon icon-share center share"
+                       title="Share">
+                        <span class="interaction-count">0</span>
+                    </a>
+                </span>
+            </span>
+            </div>
+
+    <script>
+    var run = run || {};
+    run.methods = run.methods || [];
+    run.methods = run.methods.concat({"object_name":"Thingiverse.View","method_name":"shareButtons","data":{"share_buttons":"<div class=\"justify share-buttons\">\n    <span class=\"inline\">\n        <iframe src=\"https:\/\/platform.twitter.com\/widgets\/tweet_button.html?count=horizontal&id=twitter_tweet_button_0&lang=en&original_referer=https:\/\/www.thingiverse.com\/thing:3147921&text=Blueberry Bowl by Antonin_Nosek&url=https:\/\/www.thingiverse.com\/thing:3147921\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"twitter-share-button twitter-count-horizontal\" style=\"width: 110px; height: 20px; \" title=\"Twitter For Websites: Tweet Button\"><\/iframe>\n    <\/span>\n\n    <span class=\"inline\">\n        <iframe src=\"https:\/\/www.facebook.com\/plugins\/like.php?href=https:\/\/www.thingiverse.com\/thing:3147921&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=lucida+grande&amp;colorscheme=light&amp;height=21\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:90px; height:20px;\" allowTransparency=\"true\"><\/iframe>\n    <\/span>\n\n    <span class=\"inline\">\n                <a href=\"https:\/\/pinterest.com\/pin\/create\/button\/?url=https%3A%2F%2Fwww.thingiverse.com%2Fthing%3A3147921&media=https%3A%2F%2Fcdn.thingiverse.com%2Frenders%2F77%2Fa3%2Fc9%2F78%2F04%2F0fcbea3de2f6a8a7b2a36d9f2383ce4c_display_large.jpg&description=Blueberry+Bowl+by+Antonin_Nosek.\" class=\"pin-it-button\" count-layout=\"horizontal\">Pin It<\/a>\n        <script type=\"text\/javascript\" src=\"https:\/\/assets.pinterest.com\/js\/pinit.js\" async=\"true\"><\/script>\n    <\/span>\n<\/div>\n"}});
+</script>
+</div>
+
+<h3>Thing Apps Enabled</h3>
+
+<div class="item-list-interactions">
+    <div class="item-interactions justify">
+
+
+                    <span class="interaction">
+                <a href="/thing:3147921/apps"
+                   class="icon icon-apps center interaction-title" title="View All Apps">
+                </a>
+            </span>
+            </div>
+</div>
+                    </div>
+    </div>
+
+
+        <div class="block_nav bottom_content">
+                    <a href="/thing:3147921" class="block_nav_item icon-details" >
+            Thing Details        </a>
+                    <a href="/thing:3147921/files" class="block_nav_item icon-files" >
+            Thing Files        </a>
+                    <a href="/thing:3147921/apps" class="block_nav_item icon-apps" >
+            Apps        </a>
+                    <a href="/thing:3147921/comments" class="block_nav_item " data-count="11">
+            Comments        </a>
+                    <a href="/thing:3147921/makes" class="block_nav_item " data-count="6">
+            Makes        </a>
+                    <a href="/thing:3147921/collections" class="block_nav_item " data-count="6">
+            Collections        </a>
+                    <a href="/thing:3147921/remixes" class="block_nav_item " data-count="1">
+            Remix        </a>
+    </div>
+
+        <div class="justify">
+    <div class="width-1 inline">
+            <div class="thing-contents content_stack">
+        <h2 class="section-header">Contents</h2>
+
+        <ul class="toc">
+                            <li>
+                    <a href="#summary" data-section="summary" class="toc-link">
+                        Summary                    </a>
+                </li>
+
+                    </ul>
+    </div>
+
+
+<div class="content_stack">
+    <a href="/login/YToyOntzOjQ6InR5cGUiO3M6ODoicmVkaXJlY3QiO3M6NDoiZGF0YSI7czo0MToiaHR0cHM6Ly93d3cudGhpbmdpdmVyc2UuY29tL3RoaW5nOjMxNDc5MjEiO30=" data-modal="#user-tip" class="user-tip-btn button blue-button img-btn icon-money-light">Tip Designer</a></div>
+
+<div class="content_stack">
+    <a class="button white-button full-width img-btn icon-warning" href="/thing:3147921/report">
+        Report Thing
+    </a>
+</div>
+
+<div class="content_stack">
+    <h2 class="section-header justify">
+        Tags
+
+            </h2>
+
+
+    <div class="thing-detail-tags-container">
+        <div class="taglist">
+                    <a href="/tag:abstract">abstract</a>
+                    <a href="/tag:bowl">bowl</a>
+                    <a href="/tag:decor">decor</a>
+                    <a href="/tag:Decoration">Decoration</a>
+                    <a href="/tag:home">home</a>
+                    <a href="/tag:home_decor">home_decor</a>
+                    <a href="/tag:house">house</a>
+                    <a href="/tag:household">household</a>
+                    <a href="/tag:kitchen">kitchen</a>
+                    <a href="/tag:vase">vase</a>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="content_stack">
+    <h2 class="section-header">
+        License
+    </h2>
+
+    <div class="small-text">
+        <div class="thing-license" title="Creative Commons - Attribution - Non-Commercial">
+            <div class="cc-licenses">
+                            <img data-cfsrc="/img/cc/chooser_cc.png" style="display:none;visibility:hidden;"><noscript><img src="/img/cc/chooser_cc.png"></noscript>
+                            <img data-cfsrc="/img/cc/chooser_by.png" style="display:none;visibility:hidden;"><noscript><img src="/img/cc/chooser_by.png"></noscript>
+                            <img data-cfsrc="/img/cc/chooser_nc.png" style="display:none;visibility:hidden;"><noscript><img src="/img/cc/chooser_nc.png"></noscript>
+                    </div>
+        <div class="license-text">
+        <a href="/thing:3147921" class="inline truncate full-width">
+            <span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">
+                Blueberry Bowl            </span>
+        </a> by
+        <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.thingiverse.com/Antonin_Nosek"
+           property="cc:attributionName" rel="cc:attributionURL">
+            Antonin_Nosek        </a>
+        is licensed under the
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">
+            Creative Commons - Attribution - Non-Commercial        </a> license.
+    </div>
+</div>
+    </div>
+</div>
+
+    <div class="content_stack">
+        <h2 class="section-header justify">
+            Liked By
+
+            <a class="sub-section-header" href="/thing:3147921/likes/">
+                View All
+            </a>
+        </h2>
+
+        <div class="justify justify-left">
+                <div class="has-tooltip inline like-avatar" title="JosefE">
+        <a class="avatar-link" href="/JosefE"><div class="avatar-wrapper" data-userid="413393"><img data-src="https://cdn.thingiverse.com/renders/08/8d/b6/13/e0/7d46c505d45cb172e093ac66d139a890_thumb_small.JPG" alt="JosefE" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://cdn.thingiverse.com/renders/08/8d/b6/13/e0/7d46c505d45cb172e093ac66d139a890_thumb_small.JPG" alt="JosefE" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="wunderpine">
+        <a class="avatar-link" href="/wunderpine"><div class="avatar-wrapper" data-userid="1680612"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="wunderpine" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="wunderpine" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="MaddogAz23">
+        <a class="avatar-link" href="/MaddogAz23"><div class="avatar-wrapper" data-userid="1745128"><img data-src="https://cdn.thingiverse.com/renders/a0/cf/fd/e7/7a/17e0bccc07c1a9772362ca472257c2e3_thumb_small.jpg" alt="MaddogAz23" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://cdn.thingiverse.com/renders/a0/cf/fd/e7/7a/17e0bccc07c1a9772362ca472257c2e3_thumb_small.jpg" alt="MaddogAz23" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="yurganov">
+        <a class="avatar-link" href="/yurganov"><div class="avatar-wrapper" data-userid="929710"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="yurganov" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="yurganov" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="Joachi">
+        <a class="avatar-link" href="/Joachi"><div class="avatar-wrapper" data-userid="2291616"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="Joachi" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="Joachi" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="Tomy_Design">
+        <a class="avatar-link" href="/Tomy_Design"><div class="avatar-wrapper" data-userid="832414"><img data-src="https://cdn.thingiverse.com/renders/f8/8b/91/18/88/3b6d0c4aaf082c2f9c73b750aa0adb16_thumb_small.jpg" alt="Tomy_Design" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://cdn.thingiverse.com/renders/f8/8b/91/18/88/3b6d0c4aaf082c2f9c73b750aa0adb16_thumb_small.jpg" alt="Tomy_Design" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="yuanzhiwang">
+        <a class="avatar-link" href="/yuanzhiwang"><div class="avatar-wrapper" data-userid="2397153"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="yuanzhiwang" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="yuanzhiwang" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="TomfromOfficemax">
+        <a class="avatar-link" href="/TomfromOfficemax"><div class="avatar-wrapper" data-userid="2396743"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_maker_thumb_small.jpg" alt="TomfromOfficemax" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_maker_thumb_small.jpg" alt="TomfromOfficemax" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="Likeness36">
+        <a class="avatar-link" href="/Likeness36"><div class="avatar-wrapper" data-userid="2229491"><img data-src="https://cdn.thingiverse.com/renders/67/81/90/92/3c/3b1f7854347024837af9d7505eb3c40e_thumb_small.jpg" alt="Likeness36" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://cdn.thingiverse.com/renders/67/81/90/92/3c/3b1f7854347024837af9d7505eb3c40e_thumb_small.jpg" alt="Likeness36" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="izel">
+        <a class="avatar-link" href="/izel"><div class="avatar-wrapper" data-userid="1890571"><img data-src="https://cdn.thingiverse.com/renders/aa/18/6a/2b/35/2137e54bc9a0efa09c4ca6e37aef4ed5_thumb_small.jpg" alt="izel" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://cdn.thingiverse.com/renders/aa/18/6a/2b/35/2137e54bc9a0efa09c4ca6e37aef4ed5_thumb_small.jpg" alt="izel" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="Daranbalt4">
+        <a class="avatar-link" href="/Daranbalt4"><div class="avatar-wrapper" data-userid="2381616"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="Daranbalt4" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="Daranbalt4" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="osvold">
+        <a class="avatar-link" href="/osvold"><div class="avatar-wrapper" data-userid="58534"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_maker_thumb_small.jpg" alt="osvold" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_maker_thumb_small.jpg" alt="osvold" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="teresitka">
+        <a class="avatar-link" href="/teresitka"><div class="avatar-wrapper" data-userid="2248522"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="teresitka" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="teresitka" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="RudNick">
+        <a class="avatar-link" href="/RudNick"><div class="avatar-wrapper" data-userid="621312"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_engineer_thumb_small.jpg" alt="RudNick" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_engineer_thumb_small.jpg" alt="RudNick" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="ekopylov">
+        <a class="avatar-link" href="/ekopylov"><div class="avatar-wrapper" data-userid="2321685"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="ekopylov" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="ekopylov" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="si_xuan">
+        <a class="avatar-link" href="/si_xuan"><div class="avatar-wrapper" data-userid="2175192"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="si_xuan" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="si_xuan" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="numanair">
+        <a class="avatar-link" href="/numanair"><div class="avatar-wrapper" data-userid="550535"><img data-src="https://cdn.thingiverse.com/renders/a6/ad/a2/62/74/e7f2449f9260999e356fa1067ebc319d_thumb_small.jpg" alt="numanair" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://cdn.thingiverse.com/renders/a6/ad/a2/62/74/e7f2449f9260999e356fa1067ebc319d_thumb_small.jpg" alt="numanair" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="jillytemple">
+        <a class="avatar-link" href="/jillytemple"><div class="avatar-wrapper" data-userid="2082567"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="jillytemple" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="jillytemple" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="SciTi">
+        <a class="avatar-link" href="/SciTi"><div class="avatar-wrapper" data-userid="1890355"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="SciTi" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="SciTi" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="JonArne">
+        <a class="avatar-link" href="/JonArne"><div class="avatar-wrapper" data-userid="2372150"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="JonArne" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="JonArne" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+    <div class="has-tooltip inline like-avatar" title="maximkotik197">
+        <a class="avatar-link" href="/maximkotik197"><div class="avatar-wrapper" data-userid="1488385"><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="maximkotik197" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://www.thingiverse.com/img/default/avatar/avatar_default_thumb_small.jpg" alt="maximkotik197" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div></a>    </div>
+        </div>
+    </div>
+
+<div class="content_stack">
+    <h2 class="section-header">
+        Give a Shout Out
+    </h2>
+
+    <p class="small-text">
+        If you print this Thing and display it in public proudly give attribution
+        by printing and displaying this tag.
+    </p>
+
+    <a target="_blank" rel="noopener" href="/thing:3147921/attribution_card"
+        class="button white-button print-tag img-btn full-width icon-print">
+        Print Thing Tag
+    </a>
+</div>
+
+<div class="content_stack">
+    <h2 class="section-header justify">
+        Makes
+
+                    <a href="/thing:3147921/makes" class="sub-section-header">
+                View More
+            </a>
+            </h2>
+
+    <div class="other-makes justify justify-left">
+            <div title="Blueberry Bowl made by malakid" class="other-make ">
+            <a href="/make:557185" >
+                <img data-cfsrc="https://cdn.thingiverse.com/renders/3c/0a/b9/40/75/fc6d241378c50c827068d9edbb22110d_preview_tiny.jpg" class="preview_tiny" style="display:none;visibility:hidden;"><noscript><img src="https://cdn.thingiverse.com/renders/3c/0a/b9/40/75/fc6d241378c50c827068d9edbb22110d_preview_tiny.jpg"  class="preview_tiny" ></noscript>            </a>
+        </div>
+            <div title="Blueberry Bowl made by cyberlila" class="other-make ">
+            <a href="/make:556097" >
+                <img data-cfsrc="https://cdn.thingiverse.com/renders/fe/80/1f/67/60/d2b5ca33bd970f64a6301fa75ae2eb22_preview_tiny.jpg" class="preview_tiny" style="display:none;visibility:hidden;"><noscript><img src="https://cdn.thingiverse.com/renders/fe/80/1f/67/60/d2b5ca33bd970f64a6301fa75ae2eb22_preview_tiny.jpg"  class="preview_tiny" ></noscript>            </a>
+        </div>
+            <div title="Blueberry Bowl made by cyberlila" class="other-make ">
+            <a href="/make:556096" >
+                <img data-cfsrc="https://cdn.thingiverse.com/renders/b2/c1/46/f6/93/d2b5ca33bd970f64a6301fa75ae2eb22_preview_tiny.jpg" class="preview_tiny" style="display:none;visibility:hidden;"><noscript><img src="https://cdn.thingiverse.com/renders/b2/c1/46/f6/93/d2b5ca33bd970f64a6301fa75ae2eb22_preview_tiny.jpg"  class="preview_tiny" ></noscript>            </a>
+        </div>
+            <div title="Blueberry Bowl made by cyberlila" class="other-make ">
+            <a href="/make:556091" >
+                <img data-cfsrc="https://cdn.thingiverse.com/renders/59/8b/74/f0/97/d2b5ca33bd970f64a6301fa75ae2eb22_preview_tiny.jpg" class="preview_tiny" style="display:none;visibility:hidden;"><noscript><img src="https://cdn.thingiverse.com/renders/59/8b/74/f0/97/d2b5ca33bd970f64a6301fa75ae2eb22_preview_tiny.jpg"  class="preview_tiny" ></noscript>            </a>
+        </div>
+    </div></div>
+
+<div class="content_stack">
+    <h2 class="section-header">
+        Thing Statistics
+    </h2>
+
+    <div class="icon-views stats-item img-btn">
+        13540 Views
+    </div>
+
+    <div class="icon-download-dark stats-item img-btn">
+        13759 Downloads
+    </div>
+
+            <a href="/categories/household/decor" class="icon-category stats-item img-btn plain-link">
+            Found in Decor        </a>
+    </div>
+    </div>
+
+    <div class="width-2 share inline">
+        <div class="thing-info">
+            <div id="description" class="thing-info-content rendered-markdown">
+                <h1 class="thing-component-header summary summary">Summary</h1>
+<div><p>Hello Makers :) </p>
+<p>I've get a task from guys of Fillamentum to print something for their amazing Vertigo Starlight material. When I was sitting with my laptop on the balcony with no idea how to make design fitted for this amazing Vertigo one my wife gave me a blueberry smoothie. Sometimes there are things which bring you ideas from nothing :D I hope that this design fits perfectly to this crazy material, what do you think about that? </p>
+<p>Here it is. My Blueberry bowl. </p>
+<p>Design was pretty easy to make, because the Autodesk Meshmixer helped me a lot in this case.</p>
+<p>Model is adjusted to print without supports - There are some overhangs, but they are from the bottom and they are not vissible after printing. If you are still afraid of them, the multimaterial with soluble material is recommended here.</p>
+<p>Model has also edited the bottom which has 1 mm thickness. </p>
+<p>So enjoy guys and if you like it, leave me your comment, like, collect or donate which will help me to grow :) </p>
+<p>Thanks,<br>
+Anton&iacute;n</p></div>
+
+
+
+                            </div>
+        </div>
+
+                    <div class="content-box full-width">
+                <div>
+            <div>
+                            <h1 class="content-box-h1">More from Decor</h1>
+
+                    </div>
+
+                        <a href="/thing:2955930" class="thing-mini">
+                <img data-cfsrc="https://cdn.thingiverse.com/renders/6d/91/89/cc/cc/acca2eebf317f6d6448ef2699a742639_preview_medium.jpg" class="preview_medium" style="display:none;visibility:hidden;"><noscript><img src="https://cdn.thingiverse.com/renders/6d/91/89/cc/cc/acca2eebf317f6d6448ef2699a742639_preview_medium.jpg"  class="preview_medium" ></noscript>            </a>
+                    <a href="/thing:3135934" class="thing-mini">
+                <img data-cfsrc="https://cdn.thingiverse.com/renders/ed/6d/0f/5d/2e/c4085c8df0c666d0c1f75f25b7442271_preview_medium.jpg" class="preview_medium" style="display:none;visibility:hidden;"><noscript><img src="https://cdn.thingiverse.com/renders/ed/6d/0f/5d/2e/c4085c8df0c666d0c1f75f25b7442271_preview_medium.jpg"  class="preview_medium" ></noscript>            </a>
+                    <a href="/thing:2590046" class="thing-mini">
+                <img data-cfsrc="https://cdn.thingiverse.com/renders/d6/6d/20/46/9c/abebafd009cbf657dfe5f6d2a321ced3_preview_medium.jpg" class="preview_medium" style="display:none;visibility:hidden;"><noscript><img src="https://cdn.thingiverse.com/renders/d6/6d/20/46/9c/abebafd009cbf657dfe5f6d2a321ced3_preview_medium.jpg"  class="preview_medium" ></noscript>            </a>
+                    <a href="/thing:649284" class="thing-mini">
+                <img data-cfsrc="https://cdn.thingiverse.com/renders/66/a7/36/f5/56/switchplate2_preview_medium.jpg" class="preview_medium" style="display:none;visibility:hidden;"><noscript><img src="https://cdn.thingiverse.com/renders/66/a7/36/f5/56/switchplate2_preview_medium.jpg"  class="preview_medium" ></noscript>            </a>
+            </div>
+            </div>
+            </div>
+</div>
+    </div>
+
+<div id=cc-modal class="modal hide fade modal-overflow order-dialog thing-app-dialog">
+    <div class="modal-content-wrapper">
+        <div class="modal-content">
+
+                            <div class="modal-header">
+                    <h3>Downloading Files...</h3>                </div>
+
+
+            <div class="modal-scroll">
+                <div class="dialog-content">
+                    <div class="divider-holder justify pos-half">
+    <div class="inline half share">
+
+                    <div class="cc-modal-offer">
+                <h3 class="icon-dropbox-blue">Get 20GB of Dropbox for 6 Months - Free!</h3>
+
+                <p>Dropbox is the perfect tool for keeping all your files in sync:
+
+                <p>With 20GB, you have the space you need:
+                    <ul>
+                        <li>Manage Large Files</li>
+                        <li>Collaborate Easily</li>
+                        <li>All Your Stuff Secure in the Cloud</li>
+                    </ul>
+
+                </p>
+
+                <a href="https://www.dropbox.com/oauth2/authorize?register=true&client_id=a1pf06e8fpp779q&response_type=code&redirect_uri=https://www.thingiverse.com/claim?id=1" target="_blank" class="button blue-button offer_link">
+                    Claim Now
+                </a>
+            </div>
+
+            <hr>
+
+                    <div>
+
+                <h3>
+                    Save to Dropbox
+                </h3>
+
+                <p>If you’re logged into Dropbox, you can save directly to Dropbox.</p>
+
+                <span class="loading button blue-button db-download"></span>
+            </div>
+
+            </div>
+
+    <div class="inline half share">
+
+                    <div>
+                <h3>Show Some Love</h3>
+
+                <div class="tip-user">
+                    <p>
+                        Say thanks by giving Antonin_Nosek                        a tip and help them continue to share amazing Things with
+                        the Thingiverse community.
+                    </p>
+
+                    <div class="half">
+                        <a href="/login/YToyOntzOjQ6InR5cGUiO3M6ODoicmVkaXJlY3QiO3M6NDoiZGF0YSI7czo0MToiaHR0cHM6Ly93d3cudGhpbmdpdmVyc2UuY29tL3RoaW5nOjMxNDc5MjEiO30=" data-modal="#user-tip" class="user-tip-btn button blue-button img-btn icon-money-light">Tip Designer</a>                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+        <div class="cc-modal-license">
+            <h3>Thing License</h3>
+
+            <div class="thing-license" title="Creative Commons - Attribution - Non-Commercial">
+            <div class="cc-licenses">
+                            <img data-cfsrc="/img/cc/chooser_cc.png" style="display:none;visibility:hidden;"><noscript><img src="/img/cc/chooser_cc.png"></noscript>
+                            <img data-cfsrc="/img/cc/chooser_by.png" style="display:none;visibility:hidden;"><noscript><img src="/img/cc/chooser_by.png"></noscript>
+                            <img data-cfsrc="/img/cc/chooser_nc.png" style="display:none;visibility:hidden;"><noscript><img src="/img/cc/chooser_nc.png"></noscript>
+                    </div>
+        <div class="license-text">
+        <a href="/thing:3147921" class="inline truncate full-width">
+            <span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">
+                Blueberry Bowl            </span>
+        </a> by
+        <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.thingiverse.com/Antonin_Nosek"
+           property="cc:attributionName" rel="cc:attributionURL">
+            Antonin_Nosek        </a>
+        is licensed under the
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">
+            Creative Commons - Attribution - Non-Commercial        </a> license.
+    </div>
+</div>
+
+            <p>What does this mean?</p>
+
+            <ul>
+
+
+                                    <li>Remixing or Changing this Thing is allowed.</li>
+
+                                    <li>Commercial use is not allowed.</li>
+                            </ul>
+        </div>
+
+                    <hr>
+
+            <div>
+    <h3>Remember to Post a Make!</h3>
+
+    <p>
+        Remember to come back and post what you've printed as Make.
+        It's good for the designer and the community (that means you)!
+        To post a Make, come back to this Thing and click <strong>Post a Make</strong>.
+        Or, you can use the Thingiverse Mobile app found on
+        <a href="https://play.google.com/store/apps/details?id=com.thingiverse&hl=en"
+        target="_blank" rel="noopener">Google Play</a>
+        and the <a href="https://itunes.apple.com/us/app/thingiverse/id636202382?mt=8"
+        target="_blank" rel="noopener">Apple App Store</a>.
+    </p>
+</div>            </div>
+</div>
+                </div>
+            </div>
+
+            <div class="modal-close close"></div>
+        </div>
+    </div>
+</div>
+
+    <div id=user-tip class="modal hide fade modal-overflow order-dialog thing-app-dialog user-tip">
+    <div class="modal-content-wrapper">
+        <div class="modal-content">
+
+                            <div class="modal-header">
+                    <h3>Show Some Love - Tip Antonin_Nosek</h3>                </div>
+
+
+            <div class="modal-scroll">
+                <div class="dialog-content">
+                        <div>
+        <form action="/tip" method="post" class="standard-fields divider-holder pos-half arrow-divider justify">
+            <input type="hidden" name="to_user_id" value="1607977">
+            <input type="hidden" name="thing_id" value="">
+
+            <div class="inline">
+                <h2>
+                    Step 1:<br>
+                    <span>Select Tip Amount</span>
+                </h2>
+
+                <div class="avatar-wrapper" data-userid="1607977"><img data-src="https://cdn.thingiverse.com/renders/7c/92/d7/a8/53/a57560a08712ed423bae140349c25768_thumb_small.jpg" alt="Antonin_Nosek" class="avatar" data-cfsrc="/img/default/Gears_thumb_small.jpg" style="display:none;visibility:hidden;"><noscript><img data-src="https://cdn.thingiverse.com/renders/7c/92/d7/a8/53/a57560a08712ed423bae140349c25768_thumb_small.jpg" alt="Antonin_Nosek" class="avatar" src="/img/default/Gears_thumb_small.jpg"></noscript></div>
+                <p>
+                    Say thanks and help <strong>Antonin_Nosek</strong> continue
+                    to share amazing Things with the Thingiverse community.
+                </p>
+
+                <fieldset class="full-width">
+                    <label for="amount">Select Tip Amount</label>
+                    <select name="amount">
+                                                    <option value="3">
+                                $3.00 USD                            </option>
+                                                    <option value="5">
+                                $5.00 USD                            </option>
+                                                    <option value="8">
+                                $8.00 USD                            </option>
+                                                    <option value="13">
+                                $13.00 USD                            </option>
+                                                    <option value="21">
+                                $21.00 USD                            </option>
+                                            </select>
+                </fieldset>
+            </div>
+
+            <div class="inline">
+                <h2>Step 2:<br>
+                    <span>Checkout</span>
+                </h2>
+
+                <p>
+                    You'll need a PayPal account to tip Antonin_Nosek.
+                    Click the button below and you will be redirected to PayPal.
+                    Once the payment is complete, you'll be brought back to Thingiverse.
+                </p>
+
+                <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png"></input>
+            </div>
+        </form>
+
+        <div class="dialog-footer">
+            <a href="#" class="dialog-btn-cancel button grey-button close">Cancel</a>
+        </div>
+    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-close close"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var run = run || {};
+    run.methods = run.methods || [];
+    run.methods = run.methods.concat({"object_name":"Thingiverse.TipOrders","method_name":"View","data":{"user_id":1607977}});
+</script>
+
+<img src="/ajax/event/track/?render=image&amp;target_type=thing&amp;target_id=3147921&amp;event_type=view" width="1" height="1">
+
+
+<script>
+    var run = run || {};
+    run.methods = run.methods || [];
+    run.methods = run.methods.concat([{"object_name":"Thingiverse.Thing","method_name":"View","data":{"id":3147921,"url":"\/thing:3147921","limited_view":0,"section":"section_details","show_attribution":"","content":"<h1 class=\"thing-component-header summary summary\">Summary<\/h1>\n<div><p>Hello Makers :) <\/p>\n<p>I've get a task from guys of Fillamentum to print something for their amazing Vertigo Starlight material. When I was sitting with my laptop on the balcony with no idea how to make design fitted for this amazing Vertigo one my wife gave me a blueberry smoothie. Sometimes there are things which bring you ideas from nothing :D I hope that this design fits perfectly to this crazy material, what do you think about that? <\/p>\n<p>Here it is. My Blueberry bowl. <\/p>\n<p>Design was pretty easy to make, because the Autodesk Meshmixer helped me a lot in this case.<\/p>\n<p>Model is adjusted to print without supports - There are some overhangs, but they are from the bottom and they are not vissible after printing. If you are still afraid of them, the multimaterial with soluble material is recommended here.<\/p>\n<p>Model has also edited the bottom which has 1 mm thickness. <\/p>\n<p>So enjoy guys and if you like it, leave me your comment, like, collect or donate which will help me to grow :) <\/p>\n<p>Thanks,<br>\nAnton&iacute;n<\/p><\/div>\n","offer_data":{"name":"show_1_count_4b6ru9846mfgn00t1ni5dnll45-1541715083","value":0}}}]);
+</script>
+                        </div>                    </div>                </div>            </div>
+                                <div class="site-footer">
+    <div class="center_content center justify">
+        <div class="site-logo">
+            <a href="/">Thingiverse</a>
+        </div>
+
+        <nav class="footer-links">
+                        <a href="/about/">About Thingiverse ®</a>
+            <a href="/legal/">Legal</a>
+            <a href="//www.makerbot.com/legal/privacy/" target="_blank">Privacy Policy</a>
+            <a href="/support">Contact Us</a>
+            <a href="/developers">Developers</a>
+
+            <div class="copyright">
+                &copy; 2018
+                <a href="https://www.makerbot.com">
+                    MakerBot Industries, LLC
+                </a>
+            </div>
+        </nav>
+    </div>
+</div>
+
+                    </div>
+
+
+        <script src="/js/modernizr-custom-min.js"></script>
+        <script src="/js/jquery-3.2.1.min.js"></script>
+
+        <script>
+            var _ga_account = null;
+
+            if (location.hostname.match('thingiverse')) {
+                _ga_account = 'UA-247838-14';
+            } else if (location.hostname.match('makerbot')) {
+                _ga_account = 'UA-7650456-1';
+            }
+
+            if (typeof(mwThingiverse) !== 'undefined' && !mwThingiverse.canHazTracking) {
+                window['ga-disable-' + _ga_account] = true;
+            }
+
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', _ga_account, 'auto');
+            ga('require', 'ec');
+            ga('send', 'pageview');
+        </script>
+
+        <script>
+            var $ = jQuery.noConflict();
+            $.holdReady(true);
+
+            function loadStyleSheet(src) {
+                if (document.createStyleSheet){
+                    document.createStyleSheet(src);
+                } else {
+                    $('head').append($('<link rel="stylesheet" href="' + src + '" type="text/css" media="screen">'));
+                }
+            }
+
+            $(function() {
+                if (stylesheets.length) {
+                    for (var i = 0; i < stylesheets.length; i++) {
+                        loadStyleSheet(stylesheets[i]);
+                    }
+                }
+            });
+
+
+            Modernizr.load({
+                load: scripts,
+                complete: function() {
+                    $.holdReady(false);
+                }
+            });
+        </script>
+
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PKW6VF6');</script>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKW6VF6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4a13b0a03e","applicationID":"7179973,388812","transactionName":"MVAEYkYACEoEWhddWwgaJUNHFQlUSk0LXVoBRkVAXQQR","queueTime":0,"applicationTime":322,"atts":"HRcHFA4aG0Q=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
