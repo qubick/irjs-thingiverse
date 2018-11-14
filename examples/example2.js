@@ -7,4 +7,4 @@ var thing = require('../lib')
 //thing.createThing(1,2,3,4,5,6,7);
 //thing.getThingInfo(541095)
 //thing.getAuthorProfiles('3147921-3147921')
-thing.filterThings('3204310-3204310')
+thing.filterThings('3167262-3167262')
