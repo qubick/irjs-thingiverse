@@ -31,7 +31,7 @@
     "commander": ">= 2.6.0",
     "cryptiles": "^4.1.2",
     "download": "^4.0.0",
-    "flat": "^4.1.0",
+    "flat": "^5.0.1",
     "himalaya": "^1.1.0",
     "htm-to-json": ">= 0.1.4",
     "http-request": ">= 0.7.0",
